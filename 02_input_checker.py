@@ -7,7 +7,7 @@ def user_choice():
         response = input("File type (integer / text / image): ").lower()
 
         if response == "text" or response == "t":
-            return response 
+            return "text"
 
         else: 
             print("Please choose a valid file type!")
@@ -17,3 +17,6 @@ def user_choice():
 
 # Main routine goes here 
 data_type = user_choice()
+print("you chose", data_type)
+
+print()
