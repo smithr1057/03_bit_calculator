@@ -71,5 +71,3 @@ while keep_going == "":
     
     # For integers, ask for integer
     # (must be an integer more than / equal to 0)
-
-    # For images, ask for width and height 
