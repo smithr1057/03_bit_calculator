@@ -33,7 +33,7 @@ def user_choice():
          # if they choose "int" or "interger", return "interger"
         int_ok = ["int", "integer"]
         if response in int_ok:
-            return "interger"
+            return "integer"
 
          # if they choose "image" or "p" or "img", return "image"
         img_ok = ["image", "p", "img"]
@@ -54,6 +54,32 @@ def user_choice():
             print()
 
 
+# checks input is a number more than a given value
+def num_check(question, low):
+    valid = False
+    while not valid:
+
+        error = "please enter a integer that is more than (or equal to) {}".format(low)
+
+        try:
+        
+            # Ask user to enter a number
+            response = int(input(question))
+
+            # checks number is more than zero
+            if response >= low:
+                return response
+
+            # outputs error if input is invalid
+            else: 
+                print(error)
+                print()
+
+        except ValueError:
+            print(error)
+            print()
+
+
 # Main Routine goes here
 
 # Heading
@@ -70,4 +96,17 @@ while keep_going == "":
     print("You chose", data_type)
     
     # For integers, ask for integer
-    # (must be an integer more than / equal to 0)
+        # (must be an integer more than / equal to 0)
+    if data_type =="integer":
+        integer = num_check("Enter an integer: ", 0)
+    
+    # For images, ask for width and height
+    # (must be integers more than / equal to 1)
+    elif data_type =="image":
+        image_width = num_check("Image width? ", 1)
+        print()
+        image_height = num_check("Image height? ", 1)
+
+    # For text, ask for a string
+    else:
+        text = input("Enter some text: ")

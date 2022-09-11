@@ -18,5 +18,3 @@ def user_choice():
 # Main routine goes here 
 data_type = user_choice()
 print("you chose", data_type)
-
-print()
