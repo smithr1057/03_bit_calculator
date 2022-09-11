@@ -44,4 +44,7 @@ def int_bits():
     print("# of bits is {}".format(num_bits))
     print()
 
-    
+    return ""
+
+# Main routine
+int_bits()
