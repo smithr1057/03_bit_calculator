@@ -173,7 +173,10 @@ def int_bits():
 statement_generator("Bit Calculator for Integers, Text & Images", "-")
 
 # Display instructions if user has not used the progra before
+first_time = input("Press <enter> to see the instructions or any key to continue ")
 
+if first_time == "":
+    instructions()
 # Loop to allow multiple calulations per session
 keep_going = ""
 while keep_going == "":
