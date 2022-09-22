@@ -42,7 +42,7 @@ def num_check(question):
         try:
         
             # Ask user to enter a number
-            response = float(input(question))
+            response = int(input(question))
 
             # checks number is more than zero
             if response > 0:
@@ -60,17 +60,22 @@ def num_check(question):
 # Gets factors, returns a sorted list
 def get_factors(to_factor):
 
-
-
-
+    # empty list to hold factors
     my_list = []
+
+    # find factors...
+    for item in range(1, to_factor):
+        if to_factor % item == 0:
+            my_list.append(item)
+            # my_list.append(to_factor)
+
     # print the *unsorted*  list...
     print(my_list)
 
     # sort the list
     my_list.sort()
 
-    my_list_len = len(my_list)
+    # my_list_len = len(my_list)
 
     # print the sorted list
     print()
